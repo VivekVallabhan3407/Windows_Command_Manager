@@ -9,7 +9,7 @@ Built without a database, using structured JSON files for simplicity and learnin
 
 - Provide quick reference + examples
 
-## 🧩 Scope
+## Scope
 
 - View categorized Windows commands
 
@@ -18,7 +18,7 @@ Built without a database, using structured JSON files for simplicity and learnin
 - Practice basic command understanding
 
 
-## ✨ Features
+## Features
 
 - Command categories (File, Network, System, Disk, etc.)
 
@@ -29,7 +29,7 @@ Built without a database, using structured JSON files for simplicity and learnin
 - Practice mode (non-scored)
 
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Frontend: React + TypeScript
 - React Toastify notifications
