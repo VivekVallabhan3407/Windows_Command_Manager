@@ -17,4 +17,19 @@ Built without a database, using structured JSON files for simplicity and learnin
 
 - Practice basic command understanding
 
-- Extendable for future quiz mode
+
+## ✨ Features
+
+- Command categories (File, Network, System, Disk, etc.)
+
+- Search & filter commands
+
+- Syntax + example viewer
+
+- Practice mode (non-scored)
+
+
+## 🛠 Tech Stack
+
+- Frontend: React + TypeScript
+- React Toastify notifications
