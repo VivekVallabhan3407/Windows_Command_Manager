@@ -7,7 +7,7 @@ function App() {
   const [searchText,setSearchText]=useState("");
 
   const filteredCommands=commands.filter((cmd)=>{
-    cmd.commands.toLowerCase().includes(searchText.toLowerCase());
+    return cmd.command.toLowerCase().includes(searchText.toLowerCase());
   })
   return (
     <>
