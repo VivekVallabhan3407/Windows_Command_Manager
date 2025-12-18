@@ -1,4 +1,4 @@
-# Windows_Command_Manager
+# Windows Command Manager
 
 A beginner-friendly tool to explore, understand, and practice Windows command-line commands.
 Built without a database, using structured JSON files for simplicity and learning.
@@ -31,5 +31,5 @@ Built without a database, using structured JSON files for simplicity and learnin
 
 ## Tech Stack
 
-- Frontend: React + TypeScript
+- Frontend: React + JavaScript
 - React Toastify notifications
