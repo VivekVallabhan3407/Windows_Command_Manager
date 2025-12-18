@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import commands from './data/commands.json'
 import CommandList from './components/CommandList.jsx'
 
 function App() {

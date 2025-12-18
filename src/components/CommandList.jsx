@@ -4,7 +4,7 @@ const CommandList=({commands})=>{
             {
                 commands.map((cmd)=>(
                     <div key={cmd.id} style={{marginBottom:"20px"}}>
-                        <h3>{cmd.name}</h3>
+                        <h3>{cmd.command}</h3>
                         <p>{cmd.description}</p>
                         <small>
                             <b>Category:</b>{cmd.category}
@@ -16,3 +16,5 @@ const CommandList=({commands})=>{
 
     );
 };
+
+export default CommandList;
