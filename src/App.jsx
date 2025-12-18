@@ -4,16 +4,20 @@ import CommandList from './components/CommandList.jsx'
 import SearchBar from './components/SearchBar.jsx'
 
 function App() {
-  const [searchText,setSearchText]=useState("");
+  const [searchText, setSearchText] = useState("");
 
-  const filteredCommands=commands.filter((cmd)=>{
+  const filteredCommands = commands.filter((cmd) => {
     return cmd.command.toLowerCase().includes(searchText.toLowerCase());
   })
   return (
     <>
       <div>
+        <h1 className="text-3xl font-bold text-blue-600">
+          Tailwind is Working!
+        </h1>
+
         <h1>Welcome to Windows Command Manager</h1>
-        <SearchBar searchText={searchText} onSearchChange={setSearchText}/> 
+        <SearchBar searchText={searchText} onSearchChange={setSearchText} />
         <CommandList commands={filteredCommands} />
       </div>
     </>
