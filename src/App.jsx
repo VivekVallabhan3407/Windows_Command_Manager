@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import commands from './data/commands.json'
 import CommandList from './components/CommandList.jsx'
+import SearchBar from './components/SearchBar.jsx'
 
 function App() {
+  const [searchText,setSearchText]=useState("");
 
+  const filteredCommands=commands.filter((cmd)=>{
+    cmd.commands.toLowerCase().includes(searchText.toLowerCase());
+  })
   return (
     <>
       <div>
         <h1>Welcome to Windows Command Manager</h1>
-        <CommandList commands={commands} />
+        <SearchBar searchText={searchText} onSearchChange={setSearchText}/> 
+        <CommandList commands={filteredCommands} />
       </div>
     </>
   )
