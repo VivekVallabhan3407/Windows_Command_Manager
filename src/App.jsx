@@ -1,12 +1,13 @@
 import { useState } from 'react'
+import CommandList from './components/CommandList.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
         <h1>Welcome to Windows Command Manager</h1>
+        <CommandList commands={commands} />
       </div>
     </>
   )

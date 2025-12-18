@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "command": "dir",
+    "description": "Lists files and directories in the current directory",
+    "category": "File Management",
+    "example": "dir C:\\Users"
+  },
+  {
+    "id": 2,
+    "command": "cd",
+    "description": "Changes the current directory",
+    "category": "File Management",
+    "example": "cd Documents"
+  },
+  {
+    "id": 3,
+    "command": "ipconfig",
+    "description": "Displays IP configuration details",
+    "category": "Networking",
+    "example": "ipconfig /all"
+  }
+]
