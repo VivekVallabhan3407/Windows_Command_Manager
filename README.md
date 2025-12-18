@@ -32,4 +32,5 @@ Built without a database, using structured JSON files for simplicity and learnin
 ## Tech Stack
 
 - Frontend: React + JavaScript
+- TailWindCSS: for styling
 - React Toastify notifications
