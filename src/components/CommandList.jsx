@@ -1,6 +1,10 @@
 import CommandCard from "./CommandCard";
 
 const CommandList=({commands})=>{
+    if(commands.length===0)
+    {
+        return <p className="text-gray-500 mt-4">No commands available.</p>;
+    }
     return(
         <div>
             {
