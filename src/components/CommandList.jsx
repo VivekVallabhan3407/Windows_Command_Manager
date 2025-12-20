@@ -1,3 +1,5 @@
+import CommandCard from "./CommandCard";
+
 const CommandList=({commands})=>{
     return(
         <div>
