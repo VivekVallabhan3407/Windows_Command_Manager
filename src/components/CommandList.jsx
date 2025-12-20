@@ -1,23 +1,14 @@
 import CommandCard from "./CommandCard";
 
-const CommandList=({commands})=>{
-    if(commands.length===0)
-    {
+const CommandList = ({ commands }) => {
+    if (commands.length === 0) {
         return <p className="text-gray-500 mt-4">No commands available.</p>;
     }
-    return(
-        <div>
-            {
-                commands.map((cmd)=>(
-                    <div key={cmd.id} style={{marginBottom:"20px"}}>
-                        <h3>{cmd.command}</h3>
-                        <p>{cmd.description}</p>
-                        <small>
-                            <b>Category:</b>{cmd.category}
-                        </small>
-                        <pre>{cmd.example}</pre>
-                    </div>
-                ))}
+    return (
+        <div className="mt-4 space-y-4">
+            {commands.map((cmd) => (
+                <CommandCard key={cmd.id} command={cmd} />
+            ))}
         </div>
 
     );
