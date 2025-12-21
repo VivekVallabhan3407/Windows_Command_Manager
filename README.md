@@ -1,7 +1,7 @@
 # Windows Command Manager
 
 A beginner-friendly tool to explore, understand, and practice Windows command-line commands.
-Built without a database, using structured JSON files for simplicity and learning.
+Built without a database, using structured JSON files for simplicity and learning. Users can navigate to different sections using sidebar wiht easy navigation and good and simple design.
 
 ## Aim
 
