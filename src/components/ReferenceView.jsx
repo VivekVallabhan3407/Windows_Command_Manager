@@ -1,7 +1,7 @@
-import { useState } from "react";
 import commands from "../data/commands.json";
-import SearchBar from "./SearchBar";
-import CommandList from "./CommandList";
+import { useState } from "react";
+import SearchBar from "../components/SearchBar";
+import CommandList from "../components/CommandList";
 
 const ReferenceView = () => {
   const [searchText, setSearchText] = useState("");
@@ -12,10 +12,13 @@ const ReferenceView = () => {
 
   return (
     <div>
+      <h2>Command Reference</h2>
+
       <SearchBar
         searchText={searchText}
         onSearchChange={setSearchText}
       />
+
       <CommandList commands={filteredCommands} />
     </div>
   );
