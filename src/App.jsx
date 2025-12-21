@@ -1,23 +1,21 @@
 import { useState } from 'react'
-import commands from './data/commands.json'
-import CommandList from './components/CommandList.jsx'
-import SearchBar from './components/SearchBar.jsx'
+import Sidebar from './components/SideBar';
+import HomeView from './components/HomeView';
+import ReferenceView from './components/ReferenceView';
 
 function App() {
-  const [searchText, setSearchText] = useState("");
+  const [activeView, setActiveView] = useState("home");
 
-  const filteredCommands = commands.filter((cmd) => {
-    return cmd.command.toLowerCase().includes(searchText.toLowerCase());
-  })
+
   return (
-    <>
-      <div>
+    <div style={{ display: "flex", minHeight: "100vh" }}>
+      <Sidebar activeView={activeView} setActiveView={setActiveView} />
 
-        <h1>Welcome to Windows Command Manager</h1>
-        <SearchBar searchText={searchText} onSearchChange={setSearchText} />
-        <CommandList commands={filteredCommands} />
+      <div style={{ flex: 1, padding: "20px" }}>
+        {activeView === "home" && <HomeView setActiveView={setActiveView} />}
+        {activeView === "reference" && <ReferenceView />}
       </div>
-    </>
+    </div>
   )
 }
 
