@@ -1,27 +1,41 @@
+import { useState } from "react";
+import React from "react";
+
 const CommandCard = ({ command }) => {
+  const [expanded, setExpanded] = useState(false);
   return (
-    <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition">
-      
+    <div className="border rounded-lg p-4 mb-4 bg-white shadow-sm">
       {/* Command name */}
-      <h3 className="text-xl font-semibold text-blue-600">
+      <h3 className="text-xl font-semibold text-gray-800">
         {command.command}
       </h3>
 
       {/* Description */}
-      <p className="text-gray-700 mt-2">
+      <p className="text-gray-600 mt-1">
         {command.description}
       </p>
 
-      {/* Category */}
-      <p className="text-sm mt-3 text-gray-500">
-        <span className="font-medium text-gray-700">Category:</span>{" "}
-        {command.category}
-      </p>
+      {/* Toggle button */}
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="mt-3 text-blue-600 text-sm font-medium hover:underline"
+      >
+        {expanded ? "Hide details ▲" : "Show details ▼"}
+      </button>
 
-      {/* Example */}
-      <pre className="mt-4 bg-gray-100 text-sm p-3 rounded-lg overflow-x-auto">
-        <code>{command.example}</code>
-      </pre>
+      {/* Expandable content */}
+      {expanded && (
+        <div className="mt-4">
+          <p className="text-sm mb-2">
+            <span className="font-semibold">Category:</span>{" "}
+            {command.category}
+          </p>
+
+          <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
+            {command.example}
+          </pre>
+        </div>
+      )}
     </div>
   );
 };
