@@ -1,3 +1,7 @@
+import {useState} from "react";
+import React from "react";
+
+
 const Sidebar = ({ activeView, setActiveView }) => {
   return (
     <div style={{ width: "220px", padding: "20px", borderRight: "1px solid #ddd" }}>

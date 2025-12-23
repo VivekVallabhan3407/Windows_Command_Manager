@@ -5,15 +5,16 @@ import ReferenceView from './components/ReferenceView';
 
 function App() {
   const [activeView, setActiveView] = useState("home");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
 
   return (
     <div style={{ display: "flex", minHeight: "100vh" }}>
-      <Sidebar activeView={activeView} setActiveView={setActiveView} />
+      <Sidebar activeView={activeView} setActiveView={setActiveView} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
 
       <div style={{ flex: 1, padding: "20px" }}>
         {activeView === "home" && <HomeView setActiveView={setActiveView} />}
-        {activeView === "reference" && <ReferenceView />}
+        {activeView === "reference" && <ReferenceView selectedCategory={selectedCategory}/>}
       </div>
     </div>
   )
