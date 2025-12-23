@@ -57,6 +57,17 @@ const Sidebar = ({ activeView, setActiveView , selectedCategory, setSelectedCate
         </div>
       )}
 
+      <button
+        onClick={() => setActiveView("practice")}
+        style={{
+          display: "block",
+          marginTop: "10px",
+          fontWeight: activeView === "practice" ? "bold" : "normal",
+        }}
+      >
+        Practice
+      </button>
+
     </div>
   );
 };
