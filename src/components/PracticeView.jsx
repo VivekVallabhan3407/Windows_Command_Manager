@@ -68,3 +68,4 @@ const PracticeView = () => {
   );
 };
 
+export default PracticeView;
