@@ -3,21 +3,98 @@
     "id": 1,
     "command": "dir",
     "description": "Lists files and directories in the current directory",
-    "category": "File Management",
+    "category": "File System",
     "example": "dir C:\\Users"
   },
   {
     "id": 2,
     "command": "cd",
     "description": "Changes the current directory",
-    "category": "File Management",
+    "category": "File System",
     "example": "cd Documents"
   },
   {
     "id": 3,
+    "command": "copy",
+    "description": "Copies one or more files to another location",
+    "category": "File System",
+    "example": "copy file.txt D:\\Backup"
+  },
+  {
+    "id": 4,
+    "command": "move",
+    "description": "Moves files from one directory to another",
+    "category": "File System",
+    "example": "move file.txt D:\\Docs"
+  },
+  {
+    "id": 5,
+    "command": "del",
+    "description": "Deletes one or more files",
+    "category": "File System",
+    "example": "del temp.txt"
+  },
+  {
+    "id": 6,
     "command": "ipconfig",
     "description": "Displays IP configuration details",
     "category": "Networking",
     "example": "ipconfig /all"
+  },
+  {
+    "id": 7,
+    "command": "ping",
+    "description": "Checks network connectivity to a host",
+    "category": "Networking",
+    "example": "ping google.com"
+  },
+  {
+    "id": 8,
+    "command": "netstat",
+    "description": "Displays network connections and listening ports",
+    "category": "Networking",
+    "example": "netstat -an"
+  },
+  {
+    "id": 9,
+    "command": "tasklist",
+    "description": "Displays currently running processes",
+    "category": "System / Process",
+    "example": "tasklist"
+  },
+  {
+    "id": 10,
+    "command": "taskkill",
+    "description": "Terminates a running process",
+    "category": "System / Process",
+    "example": "taskkill /IM chrome.exe /F"
+  },
+  {
+    "id": 11,
+    "command": "systeminfo",
+    "description": "Displays detailed system configuration",
+    "category": "System / Process",
+    "example": "systeminfo"
+  },
+  {
+    "id": 12,
+    "command": "chkdsk",
+    "description": "Checks disk for errors",
+    "category": "Disk & Storage",
+    "example": "chkdsk C:"
+  },
+  {
+    "id": 13,
+    "command": "format",
+    "description": "Formats a disk",
+    "category": "Disk & Storage",
+    "example": "format D:"
+  },
+  {
+    "id": 14,
+    "command": "diskpart",
+    "description": "Manages disks, partitions, and volumes",
+    "category": "Disk & Storage",
+    "example": "diskpart"
   }
 ]
