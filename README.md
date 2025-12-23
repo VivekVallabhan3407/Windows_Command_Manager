@@ -26,7 +26,7 @@ Built without a database, using structured JSON files for simplicity and learnin
 
 - Syntax + example viewer
 
-- Practice mode (non-scored)
+- Practice mode for practicing random commands of all categories, wiht multiple type of formats.(non-scored)
 
 
 ## Tech Stack
