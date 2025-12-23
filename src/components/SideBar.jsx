@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 
 
-const Sidebar = ({ activeView, setActiveView }) => {
+const Sidebar = ({ activeView, setActiveView , selectedCategory, setSelectedCategory}) => {
   const [isReferenceOpen, setIsReferenceOpen] = useState(false);
 
   return (
