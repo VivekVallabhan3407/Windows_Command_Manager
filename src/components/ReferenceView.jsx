@@ -3,11 +3,15 @@ import commands from "../data/commands.json";
 import SearchBar from "../components/SearchBar";
 import CommandList from "../components/CommandList";
 
-const ReferenceView = () => {
+const ReferenceView = ({selectedCategory}) => {
   const [searchText, setSearchText] = useState("");
 
-  const filteredCommands = commands.filter((cmd) =>
-    cmd.command.toLowerCase().includes(searchText.toLowerCase())
+  const filteredCommands = commands.filter((cmd) =>{
+        const matchesSearch=cmd.command.toLowerCase().includes(searchText.toLowerCase());
+        const matchesCategory=selectedCategory==="All" || cmd.category===selectedCategory;
+        return matchesSearch && matchesCategory;
+
+  }
   );
 
   return (
