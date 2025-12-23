@@ -3,6 +3,8 @@ import React from "react";
 
 
 const Sidebar = ({ activeView, setActiveView }) => {
+  const [isReferenceOpen, setIsReferenceOpen] = useState(false);
+
   return (
     <div style={{ width: "220px", padding: "20px", borderRight: "1px solid #ddd" }}>
       <h3>Menu</h3>
@@ -19,7 +21,7 @@ const Sidebar = ({ activeView, setActiveView }) => {
       </button>
 
       <button
-        onClick={() => setActiveView("reference")}
+        onClick={() =>{ setActiveView("reference"); setIsReferenceOpen(!isReferenceOpen);}}
         style={{
           display: "block",
           marginTop: "10px",
