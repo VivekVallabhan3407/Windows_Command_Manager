@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 
 
-const Sidebar = ({ activeView, setActiveView , selectedCategory, setSelectedCategory}) => {
+const Sidebar = ({ activeView, setActiveView, selectedCategory, setSelectedCategory }) => {
   const [isReferenceOpen, setIsReferenceOpen] = useState(false);
 
   return (
@@ -20,20 +20,55 @@ const Sidebar = ({ activeView, setActiveView , selectedCategory, setSelectedCate
         Home
       </button>
 
-      <button
-        onClick={() => { setActiveView("reference"); setIsReferenceOpen(!isReferenceOpen); }}
+      <div
         style={{
-          display: "block",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
           marginTop: "10px",
-          fontWeight: activeView === "reference" ? "bold" : "normal",
+          cursor: "pointer",
         }}
       >
-        Command Reference
-      </button>
+        {/* Text click = navigation */}
+        <span
+          onClick={() => setActiveView("reference")}
+          style={{
+            fontWeight: activeView === "reference" ? "bold" : "normal",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
+        >
+          Command Reference
+        </span>
+
+        {/* Arrow click = expand / collapse */}
+        <span
+          onClick={() => setIsReferenceOpen(!isReferenceOpen)}
+          style={{
+            marginLeft: "8px",
+            fontSize: "12px",
+            transform: isReferenceOpen ? "rotate(90deg)" : "rotate(0deg)",
+            transition: "transform 0.2s ease",
+            userSelect: "none",
+          }}
+        >
+          ▶
+        </span>
+      </div>
+
 
       {/* Practice can be added later */}
       {isReferenceOpen && (
-        <div style={{ marginLeft: "15px", marginTop: "8px" }}>
+        <div
+          style={{
+            marginLeft: "16px",
+            marginTop: "6px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "6px",
+          }}
+        >
           {[
             "All",
             "File System",
@@ -45,10 +80,16 @@ const Sidebar = ({ activeView, setActiveView , selectedCategory, setSelectedCate
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               style={{
-                padding: "6px 0",
-                cursor: "pointer",
                 fontSize: "14px",
-                fontWeight: selectedCategory === cat ? "bold" : "normal",
+                cursor: "pointer",
+                padding: "4px 6px",
+                borderRadius: "4px",
+                background:
+                  selectedCategory === cat ? "#e5e7eb" : "transparent",
+                fontWeight: selectedCategory === cat ? "600" : "400",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
               {cat}
@@ -56,6 +97,7 @@ const Sidebar = ({ activeView, setActiveView , selectedCategory, setSelectedCate
           ))}
         </div>
       )}
+
 
       <button
         onClick={() => setActiveView("practice")}
