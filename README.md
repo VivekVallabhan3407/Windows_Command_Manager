@@ -22,7 +22,7 @@ Built without a database, using structured JSON files for simplicity and learnin
 
 - Command categories (File, Network, System, Disk, etc.)
 
-- Search & filter commands
+- Search & filter commands by categories.
 
 - Syntax + example viewer
 
