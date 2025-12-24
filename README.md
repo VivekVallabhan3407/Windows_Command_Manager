@@ -29,3 +29,7 @@ Built without a database, using structured JSON files for simplicity and learnin
 - Frontend: React + JavaScript
 - TailWindCSS: for styling
 - React Toastify notifications
+
+## License
+
+This is MIT Open Source License.
