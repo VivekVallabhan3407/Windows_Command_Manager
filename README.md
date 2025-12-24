@@ -10,7 +10,7 @@ Built without a database, using structured JSON files for simplicity and learnin
 
 - Learn syntax, usage, and examples
 
-- Practice basic command understanding wiht both mcq and short answer type questions
+- Practice basic command understanding wiht mcqs and scores.
 
 
 ## Features
