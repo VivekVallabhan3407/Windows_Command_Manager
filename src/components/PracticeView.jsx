@@ -9,8 +9,13 @@ const PracticeView = () => {
 
   const handleNext = () => {
     setShowAnswer(false);
-    const randomIndex=Math.floor(Math.random()*commands.length);
-   setCurrentIndex(randomIndex);
+    const randomIndex = Math.floor(Math.random() * commands.length);
+    setCurrentIndex(randomIndex);
+  };
+
+  const handleRestart = () => {
+    setShowAnswer(false);
+    setCurrentIndex(Math.floor(Math.random() * commands.length));
   };
 
   return (
@@ -60,6 +65,10 @@ const PracticeView = () => {
             className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
           >
             Next
+          </button>
+
+          <button onClick={handleRestart} className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">
+            Restart
           </button>
         </div>
       </div>
