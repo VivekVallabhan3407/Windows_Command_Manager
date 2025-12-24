@@ -9,9 +9,8 @@ const PracticeView = () => {
 
   const handleNext = () => {
     setShowAnswer(false);
-    setCurrentIndex((prev) =>
-      prev + 1 < commands.length ? prev + 1 : 0
-    );
+    const randomIndex=Math.floor(Math.random()*commands.length);
+   setCurrentIndex(randomIndex);
   };
 
   return (
