@@ -30,6 +30,10 @@ Built without a database, using structured JSON files for simplicity and learnin
 - TailWindCSS: for styling
 - React Toastify notifications
 
+## Project Structure
+
+
+
 ## License
 
 This is MIT Open Source License.
