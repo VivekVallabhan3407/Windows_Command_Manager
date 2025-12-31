@@ -32,6 +32,16 @@ Built without a database, using structured JSON files for simplicity and learnin
 
 ## Project Structure
 
+## 🚀 Getting Started (Local Setup)
+
+```bash
+git clone https://github.com/your-username/cybercrime-awareness-guide.git
+cd cybercrime-awareness-guide
+npm install
+npm run dev
+```
+
+The site will be available at http://localhost:3000
 
 
 ## License
