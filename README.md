@@ -35,8 +35,8 @@ Built without a database, using structured JSON files for simplicity and learnin
 ## 🚀 Getting Started (Local Setup)
 
 ```bash
-git clone https://github.com/your-username/cybercrime-awareness-guide.git
-cd cybercrime-awareness-guide
+git clone https://github.com/VivekVallabhan3407/Windows_Command_Manager.git
+cd windows_command_manager
 npm install
 npm run dev
 ```
